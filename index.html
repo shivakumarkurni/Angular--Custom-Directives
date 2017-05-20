@@ -9,21 +9,24 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 <body>
- <div ng-controller="myController">
+ <div class="container" ng-controller="myController">
  	{{message}}
- 	<div>
- 		<my-customer-details-directive>
- 			
- 		</my-customer-details-directive>
- 		<div my-customer-details-directive>
- 			<div class="my-customer-details-directive">
- 				<!--directive: my-customer-details-directive -->
- 			</div>
 
- 		</div>
+
+ 	<div ng-repeat="user in userDetails">
+ 		<my-customer-details-directive 
+
+ 		company-name="{{companyName}}"
+        user-details="user"
+        change="changeCompanyName()"
+
+ 		>
+ 			
+ 		</my-customer-details-directive>	
  	</div>
  	<script type="text/javascript" src="https://code.angularjs.org/1.6.4/angular.js"></script>
 	<script type="text/javascript" src="app.js"></script>
  </div>
 </body>
 </html>
+
