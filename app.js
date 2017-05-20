@@ -21,6 +21,13 @@ app.directive("myCustomerDetailsDirective",function(){
      companyName:'@',
      userDetails:'=',
      change:'&'
+    },
+    compile:function(element,attributes){
+    	console.log("In compile !!!")
+    	console.log(element)
+    	console.log(attributes)
     }
+
+
   }
 })
